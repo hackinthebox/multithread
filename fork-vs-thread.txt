@@ -1,0 +1,3 @@
+A fork gives you a brand new process, which is a copy of the current process, with the same code segments. As the memory image changes (typically this is due to different behavior of the two processes) you get a separation of the memory images (Copy On Write), however the executable code remains the same. Tasks do not share memory unless they use some Inter Process Communication (IPC) primitive.
+
+One process can have multiple threads, each executing in parallel within the same context of the process. Memory and other resources are shared among threads, therefore shared data must be accessed through some primitive and synchronization objects (like mutexes, condition variables and semaphores) that allow you to avoid data corruption.
